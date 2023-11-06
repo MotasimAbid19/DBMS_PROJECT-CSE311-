@@ -1,0 +1,54 @@
+admin
+-----------
+id  int(11)  pk
+email   varchar(25)
+password   varchar(25)
+
+book
+----------
+id int(11)  pk 
+bookpic varchar(25)
+bookname varchar(25) 
+bookdetail varchar(110)
+bookauthor varchar(25)
+bookpub varchar(25)
+branch varchar(110)
+bookprice varchar(25)
+bookquantity varchar(25)
+bookava int(11)
+bookrent int(11)
+
+
+issuebook
+-------------
+id int(11)  
+userid int(11)  foreign key references userdata.id
+issuename varchar(25)
+issuebook varchar(25)
+issuetype varchar(25)
+issuedays int(11)
+issuedate varchar(25) 
+issuereturn varchar(25)
+fine int(11)
+
+
+
+requestbook
+-------------------
+id int(11)
+userid int(11)   foreign key references userdata.id
+bookid int(11)    foreign key references book.id
+username  varchar(25)
+usertype varchar(25)
+bookname varchar(25)
+issuedays  varchar(25)
+
+userdata
+-------------
+id  int(11)  pk 
+name  varchar(25) 
+email varchar(25) 
+pass  varchar(25) 
+type   varchar(25)
+
+
